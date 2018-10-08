@@ -1,4 +1,4 @@
-function getsporttisaittilink(url, file, hrefclass)
+function getsporttisaittilink(url, file, hrefid)
 {
 	var rawFile = new XMLHttpRequest();
 	rawFile.open("GET", url, true);
@@ -23,7 +23,7 @@ function getsporttisaittilink(url, file, hrefclass)
 					 alert("foo");
 					 var foo = href.search(file);
 					 if (foo > -1) {
-						  var links = document.getElementsByClassName(hrefclass);
+						  var links = document.getElementById(hrefid);
 						  links[0].href = href;
 					 }
 					 
