@@ -11,20 +11,17 @@ function getsporttisaittilink(url, file, hrefid)
 			if(rawFile.status === 200 || rawFile.status == 0)
 			{
 				var i;
-
 				var allText = rawFile.responseText;
-				alert(allText);
 				let parser = new DOMParser();
 				let parsedHtml = parser.parseFromString(allText, 'text/html');
 				filenames = parsedHtml.getElementsByClassName("filename");
 				
 				for (i = 0; i < filenames.length; i++) {
 					 var href = filenames[i].getElementsByTagName("a")[0].href;
-					 alert("foo");
 					 var foo = href.search(file);
 					 if (foo > -1) {
 						  var links = document.getElementById(hrefid);
-						  links[0].href = href;
+						  links.href = href;
 					 }
 					 
 				}
