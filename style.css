@@ -1,0 +1,71 @@
+* {
+	margin:0;
+	padding:0;	
+}
+
+header {
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("https://foobar.sporttisaitti.com/@Bin/255345/foo.jpg");
+	background-position: center;
+	min-height:200px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width:100%;
+}
+
+header h1 {
+	color:white;
+}
+
+.navigation-list {
+	float:right;
+	list-style:none;
+}
+
+.navigation-list li {
+	display: inline-block;
+}
+
+.navigation-list li a {
+	text-decoration: none;
+	color: white;
+	padding: 5px 20px;
+	font-size: 15px;
+}
+
+.navigation-list li.active a {
+	border: 2px solid #e56d0c;
+}
+
+.navigation-list li a:hover {
+	border: 2px solid #e56d0c;
+}
+
+#content {
+	float: left;
+	position:relative;
+	text-align: left;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 3%;
+}
+
+#content p {
+	color: #666;
+}
+
+#footer {
+	position:relative;
+	text-align:center;
+	float: left;
+	margin-top: 5%;
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 80%;
+	margin-bottom: 3%;
+	color: #bbbbbb;
+}
+
+#footer hr {
+	color: #ccc;
+}
+
