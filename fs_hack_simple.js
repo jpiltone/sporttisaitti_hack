@@ -1,4 +1,4 @@
-function getsporttisaittilink(url, file, hrefid)
+function getsporttisaittilink(url, file, callback)
 {
 	var rawFile = new XMLHttpRequest();
 	rawFile.open("GET", url, true);
@@ -17,13 +17,11 @@ function getsporttisaittilink(url, file, hrefid)
 				filenames = parsedHtml.getElementsByClassName("filename");
 				
 				for (i = 0; i < filenames.length; i++) {
-					 var href = filenames[i].getElementsByTagName("a")[0].href;
-					 var foo = href.search(file);
-					 if (foo > -1) {
-						  var links = document.getElementById(hrefid);
-						  links.href = href;
-					 }
-					 
+					var href = filenames[i].getElementsByTagName("a")[0].href;
+					var foo = href.search(file);
+					if (foo > -1) {
+						callback(href);
+					}
 				}
 			}
 		}
